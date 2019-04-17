@@ -1,6 +1,6 @@
 //
 //  LLAlertController.swift
-//  Things+
+//  Note4Life
 //
 //  Created by Mai Nguyen on 3/29/19.
 //  Copyright © 2019 AppArt. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class LLAlertController: BuildableAlertController {
+final class MyAlertController: BuildableAlertController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

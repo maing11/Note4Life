@@ -1,6 +1,6 @@
 //
 //  Globals.swift
-//  Things+
+//  Note4Life
 //
 //  Created by Mai Nguyen on 3/30/19.
 //  Copyright © 2019 AppArt. All rights reserved.

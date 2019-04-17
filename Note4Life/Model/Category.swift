@@ -1,6 +1,6 @@
 //
 //  Category.swift
-//  Things+
+//  Note4Life
 //
 //  Created by Mai Nguyen on 3/27/19.
 //  Copyright © 2019 AppArt. All rights reserved.
@@ -67,17 +67,17 @@ extension Category {
     func categoryName() -> String {
         switch self {
         case .Work:
-            return "Groceries"
-        case .Home:
             return "Work"
-        case .Grocery:
-            return "Appointment"
-        case .Appoitment:
-            return "Family"
-        case .Resolution:
+        case .Home:
             return "Home"
+        case .Grocery:
+            return "Grocery"
+        case .Appoitment:
+            return "Appoitment"
+        case .Resolution:
+            return "Resolution"
         case .Fun:
-            return "Whatever"
+            return "Fun"
         case .All:
             return "All Notes"
         }

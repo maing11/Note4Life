@@ -1,6 +1,6 @@
 //
 //  NotesViewController.swift
-//  Things+
+//  Note4Life
 //
 //  Created by Mai Nguyen on 3/27/19.
 //  Copyright © 2019 AppArt. All rights reserved.
@@ -63,13 +63,7 @@ class NotesViewController: UIViewController {
     }()
     
     
-    private var earthTipView: TipDetailView!
-    private var bottomPullView: BottomHideView!
-    
-    private var bottomViewToViewConstraint: NSLayoutConstraint!
-    private var originalBottomTopConstant: CGFloat = 0.0
-    
-    private var earthDetailViewHeightConstraint: NSLayoutConstraint!
+
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -104,7 +98,7 @@ class NotesViewController: UIViewController {
         self.view.backgroundColor = NoteTheme.backgroundColor
         self.navigationController?.navigationBar.barStyle = .black
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationItem.title = category.categoryName() + "+"
+        self.navigationItem.title = category.categoryName()
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(didTapCompose))
@@ -158,9 +152,6 @@ class NotesViewController: UIViewController {
         
         
        
-        setupBottomPullView()
-        setupEartTipDetailView()
-        
         NotificationCenter.default.addObserver(self, selector: #selector(notesDidUpdate), name: .noteDataChanged, object: nil)
         
     }
@@ -168,112 +159,12 @@ class NotesViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        if bottomViewToViewConstraint != nil || bottomViewToViewConstraint.constant < originalBottomTopConstant {return}
     }
+
     
-    private func setupBottomPullView() {
-        let firstPositionY: CGFloat = -70
-        bottomPullView = BottomHideView(frame: CGRect(x: 0, y: firstPositionY, width: screenWidth, height: screenWidth))
-        
-        let pullGesture = UIPanGestureRecognizer(target: self, action: #selector(drawerSliding))
-        bottomPullView.visibleTipView.addGestureRecognizer(pullGesture)
-        
-        view.addSubview(bottomPullView)
-        
-        bottomPullView.delegate = self
-        
-        var bottomAnchor = view.bottomAnchor
-        bottomAnchor = view.safeAreaLayoutGuide.bottomAnchor
-        
-       
-        bottomViewToViewConstraint = bottomPullView.topAnchor.constraint(equalTo: bottomAnchor, constant: firstPositionY)
-        originalBottomTopConstant = bottomViewToViewConstraint.constant
-        
-        bottomViewToViewConstraint.isActive = true
-        
-        let headerHeightConstraint = NSLayoutConstraint(item: bottomPullView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: bottomPullView.frame.height)
-        view.addConstraint(bottomViewToViewConstraint)
-        view.addConstraint(headerHeightConstraint)
-        
-        view.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[bottomPullView]-0-|", options: [], metrics: nil, views: ["bottomPullView" : bottomPullView]))
-    }
+
     
-    private func setupEartTipDetailView(){
-        let view = TipDetailView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.layer.cornerRadius = 10
-        
-        let pullGesture = UIPanGestureRecognizer(target: self, action: #selector(animateDisapearEarthTip))
-        view.visibleTipView.addGestureRecognizer(pullGesture)
-        
-        self.view.addSubview(view)
-        view.bottomAnchor.constraint(equalTo:bottomPullView.topAnchor).isActive = true
-        view.leadingAnchor.constraint(equalTo: bottomPullView.leadingAnchor).isActive = true
-        view.trailingAnchor.constraint(equalTo: bottomPullView.trailingAnchor).isActive = true
-        earthDetailViewHeightConstraint = NSLayoutConstraint(item: view, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 0)
-        earthDetailViewHeightConstraint.isActive = true
-        self.earthTipView = view
-    }
-    
-    @objc func drawerSliding(_ sender: UIPanGestureRecognizer){
-        let location = sender.translation(in: self.view)
-        let velocity = sender.velocity(in: self.view)
-        
-        if sender.state == .ended {
-            if velocity.y > 0 {
-                closeDrawer()
-            } else {
-                openDrawer()
-            }
-    
-            bottomPullView.suspendAnimation()
-            return
-        } else {
-            let yPosition = bottomViewToViewConstraint.constant + location.y
-            if yPosition >= originalBottomTopConstant || abs(yPosition - originalBottomTopConstant) > 300 {return}
-            bottomViewToViewConstraint.constant = yPosition
-            sender.setTranslation(.zero, in: self.view)
-        }
-    }
-    
-    private func closeDrawer(){
-        bottomViewToViewConstraint.constant = originalBottomTopConstant
-        bottomPullView.setNeedsUpdateConstraints()
-        
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .curveEaseIn, animations: {
-            self.view.layoutIfNeeded()
-        }) { _ in
-            
-        }
-    }
-    
-    private func openDrawer(){
-        bottomViewToViewConstraint.constant = originalBottomTopConstant - 110
-        bottomPullView.setNeedsUpdateConstraints()
-        
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1.0, options: .curveEaseIn, animations: {
-            self.view.layoutIfNeeded()
-        }) { _ in
-            
-        }
-    }
-    
-    func popoutEarthTipView(tip: Tip){
-        self.earthTipView.bodyContentLabel.text = tip.body
-        self.earthTipView.visibleTipView.viewLabel.text = tip.title
-        self.earthTipView.visibleTipView.imageView.image = UIImage(named: tip.imageString ?? "1")
-        
-        UIView.animate(withDuration: 1.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 1, options: [.curveLinear], animations: {
-            self.earthDetailViewHeightConstraint.constant = 300
-        }, completion: nil)
-    }
-    
-    @objc private func animateDisapearEarthTip(_ pan: UIPanGestureRecognizer){
-        UIView.animate(withDuration: 0.7) {
-            self.earthDetailViewHeightConstraint.constant = 0
-            self.view.layoutIfNeeded()
-        }
-    }
+
     @objc func didTapCompose() {
         self.navigationController?.pushViewController(NoteDetailController(realmDataPersistence: self.realmDataPersistence, category: category), animated: true)
     }
@@ -289,7 +180,7 @@ class NotesViewController: UIViewController {
     }
     
     @objc private func showAlert() {
-        let alertController = LLAlertController(title: "Pick Category", message: "😀🌵🐚🍋", preferredStyle: .alert)
+        let alertController = MyAlertController(title: "Pick Category", message: "😀🌵🐚🍋", preferredStyle: .alert)
         
         for category in Category.allCategories() {
             let origImage = UIImage(named:category.categoryImageName())
@@ -408,12 +299,3 @@ extension NotesViewController: UISearchBarDelegate {
 }
 
 
-extension NotesViewController: EarthTipSelectProtocol {
-    func didSelectEarthTip(tip: Tip) {
-        popoutEarthTipView(tip: tip)
-    }
-    
-    func didSelectImages(count: Int, images: [UIImage]) {
-        
-    }
-}

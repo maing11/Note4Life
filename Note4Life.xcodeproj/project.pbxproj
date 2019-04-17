@@ -84,7 +84,7 @@
 		3392D7592266ED060007342A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74A2266ED060007342A /* HomeView.swift */; };
 		3392D75A2266ED060007342A /* TipDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74B2266ED060007342A /* TipDetailView.swift */; };
 		3392D75B2266ED060007342A /* VisibleTipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3392D74C2266ED060007342A /* VisibleTipView.xib */; };
-		3392D75C2266ED060007342A /* LLAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74E2266ED060007342A /* LLAlertController.swift */; };
+		3392D75C2266ED060007342A /* MyAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74E2266ED060007342A /* MyAlertController.swift */; };
 		3392D75D2266ED060007342A /* BottomHideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74F2266ED060007342A /* BottomHideView.swift */; };
 		3392D75E2266ED060007342A /* EarthCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3392D7502266ED060007342A /* EarthCardCollectionCell.xib */; };
 		3392D75F2266ED060007342A /* TipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3392D7512266ED060007342A /* TipView.xib */; };
@@ -187,7 +187,7 @@
 		3392D74A2266ED060007342A /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3392D74B2266ED060007342A /* TipDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipDetailView.swift; sourceTree = "<group>"; };
 		3392D74C2266ED060007342A /* VisibleTipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisibleTipView.xib; sourceTree = "<group>"; };
-		3392D74E2266ED060007342A /* LLAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAlertController.swift; sourceTree = "<group>"; };
+		3392D74E2266ED060007342A /* MyAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertController.swift; sourceTree = "<group>"; };
 		3392D74F2266ED060007342A /* BottomHideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomHideView.swift; sourceTree = "<group>"; };
 		3392D7502266ED060007342A /* EarthCardCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EarthCardCollectionCell.xib; sourceTree = "<group>"; };
 		3392D7512266ED060007342A /* TipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TipView.xib; sourceTree = "<group>"; };
@@ -410,7 +410,7 @@
 		3392D74D2266ED060007342A /* MyAlert */ = {
 			isa = PBXGroup;
 			children = (
-				3392D74E2266ED060007342A /* LLAlertController.swift */,
+				3392D74E2266ED060007342A /* MyAlertController.swift */,
 			);
 			path = MyAlert;
 			sourceTree = "<group>";
@@ -626,7 +626,7 @@
 			files = (
 				3392D73F2266ECF90007342A /* UIVIewController+Extension.swift in Sources */,
 				3392D73E2266ECF90007342A /* UIImage+Extension.swift in Sources */,
-				3392D75C2266ED060007342A /* LLAlertController.swift in Sources */,
+				3392D75C2266ED060007342A /* MyAlertController.swift in Sources */,
 				3392D7612266ED060007342A /* VisibleTipView.swift in Sources */,
 				3392D73A2266ECF90007342A /* UIAlertController+Extension.swift in Sources */,
 				3392D72D2266ECF20007342A /* Globals.swift in Sources */,

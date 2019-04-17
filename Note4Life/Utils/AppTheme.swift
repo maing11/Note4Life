@@ -1,6 +1,6 @@
 //
 //  AppTheme.swift
-//  Things+
+//  Note4Life
 //
 //  Created by Mai Nguyen on 3/27/19.
 //  Copyright © 2019 AppArt. All rights reserved.
@@ -12,7 +12,7 @@ import UIKit
 class NoteTheme {
     
     static var backgroundColor: UIColor {
-        return UIColor(red: 32/255, green: 32/255, blue: 32/255, alpha: 1.0)
+        return UIColor.init(hexString: "#E3CAAC")
     }
     
     static var logoImage: UIImage {

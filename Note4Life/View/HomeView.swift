@@ -1,6 +1,6 @@
 //
 //  CategoryView.swift
-//  Things+
+//  Note4Life
 //
 //  Created by Mai Nguyen on 3/28/19.
 //  Copyright © 2019 AppArt. All rights reserved.
@@ -11,7 +11,6 @@ import UIKit
 class HomeView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var categoryImageView: UIImageView!
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var actionButton: UIButton!
     @IBOutlet weak var bottomView: UIView!

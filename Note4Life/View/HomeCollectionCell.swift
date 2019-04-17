@@ -1,6 +1,6 @@
 //
 //  CategoryCollectionCell.swift
-//  Things+
+//  Note4Life
 //
 //  Created by Mai Nguyen on 3/28/19.
 //  Copyright © 2019 AppArt. All rights reserved.
@@ -28,7 +28,6 @@ class HomeCollectionCell: UICollectionViewCell {
             let origImage = UIImage(named:category.categoryImageName())
             let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
             
-            self.categoryView.categoryImageView.image = tintedImage
             self.categoryView.actionButton.tintColor = .white
             self.categoryView.actionButton.backgroundColor = category.categoryColor()
             self.categoryView.countLabel.layer.cornerRadius = self.categoryView.countLabel.height/2
@@ -44,9 +43,8 @@ class HomeCollectionCell: UICollectionViewCell {
             self.categoryView.actionButton.tintColor = .white
             self.categoryView.actionButton.addTarget(self, action: #selector(actionButtonClick(_:)), for: .touchUpInside)
             
-            self.categoryView.categoryImageView.tintColor = category.categoryColor()
             self.bringSubviewToFront(self.categoryView.actionButton)
-            self.bringSubviewToFront(self.categoryView.categoryImageView)
+          
             
             layoutIfNeeded()
             

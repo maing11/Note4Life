@@ -1,6 +1,6 @@
 //
 //  NoteDetailController.swift
-//  Things+
+//  Note4Life
 //
 //  Created by Mai Nguyen on 3/27/19.
 //  Copyright © 2019 AppArt. All rights reserved.
@@ -20,7 +20,7 @@ class NoteDetailController: UIViewController {
         textView.text = "..."
         textView.textAlignment = .left
         textView.isScrollEnabled = true
-        textView.backgroundColor = UIColor.clear
+        textView.backgroundColor = UIColor.white
         textView.dataDetectorTypes = .all
         textView.tintColor = UIColor.gray
         return textView
@@ -158,7 +158,7 @@ class NoteDetailController: UIViewController {
     
     
     @objc private func showAlert(_ sender: UIButton) {
-        let alertController = LLAlertController(title: "Pick Category", message: "😀🌵🐚🍋", preferredStyle: .alert)
+        let alertController = MyAlertController(title: "Pick Category", message: "😀🌵🐚🍋", preferredStyle: .alert)
         
         for category in Category.allCategories() {
             let origImage = UIImage(named:category.categoryImageName())

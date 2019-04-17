@@ -1,6 +1,6 @@
 //
 //  UIView+Extension.swift
-//  Things+
+//  Note4Life
 //
 //  Created by Mai Nguyen on 3/28/19.
 //  Copyright © 2019 AppArt. All rights reserved.
