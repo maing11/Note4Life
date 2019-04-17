@@ -173,16 +173,6 @@ class BottomHideView: UIView {
     
     override func layoutSubviews() {
         mainQueue {
-//            if self.state == .earthTip {
-//                let imageString = self.showedTip?.imageString ?? "1"
-//                self.visibleTipView.imageView.image = UIImage(named: (imageString + ".png"))
-//                self.visibleTipView.viewLabel.text = self.showedTip?.title ?? ""
-//            } else if self.state == .upgrade {
-//                self.visibleTipView.imageView.image = UIImage(named:"all")
-//                self.visibleTipView.imageView.cornerRadius = self.visibleTipView.imageView.frame.height/2
-//                self.visibleTipView.viewLabel.text = "UPGRADE TO KIND EDITION"
-//            }
-//            
             let imageString = self.showedTip?.imageString ?? "1"
             self.visibleTipView.imageView.image = UIImage(named: (imageString + ".png"))
             self.visibleTipView.viewLabel.text = self.showedTip?.title ?? ""

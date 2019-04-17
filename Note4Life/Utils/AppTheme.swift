@@ -32,17 +32,17 @@ class NoteTheme {
     }
     
     static var descArray: [String] {
-        let a1: String = "I believe that using digital note helps THE EARTH tremendously"
-        let a2: String = "I think many simple things we do affect THE EARTH in negative ways, And the app includes some of the tips to turn it around."
-        let a3: String = "Tell me if the tips are really helpful "
+        let a1: String = "Just Note It"
+        let a2: String = "Write Something Sometimes"
+        let a3: String = "There Are Some Tips On Productity"
         
         return [a1,a2,a3]
     }
     
     static var titleArray: [String] {
-        let a1: String = "DIGITAL NOTE"
-        let a2: String = "SAVE THE EARTH TIPS"
-        let a3: String = "THE KINDNESS OF YOU"
+        let a1: String = "Note For Life"
+        let a2: String = "Use Note to Save Paper"
+        let a3: String = "Lets Write Your First Note"
         
         return [a1,a2,a3]
     }

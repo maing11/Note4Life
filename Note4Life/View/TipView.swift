@@ -1,5 +1,5 @@
 //
-//  EarthCardView.swift
+//  TipView.swift
 //  Things+
 //
 //  Created by Mai Nguyen on 3/31/19.
