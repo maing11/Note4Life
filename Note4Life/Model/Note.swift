@@ -25,7 +25,7 @@ class Note {
         self.identifier = identifier
         self.content = content
         self.lastEdited = lastEdited
-        self.category   = Category(rawValue: categoryRaw) ?? .Today
+        self.category   = Category(rawValue: categoryRaw) ?? .Work
         self.trashed = trashed
         self.hasDone = hasDone
     }

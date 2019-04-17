@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
         return .lightContent
     }
     
-    var selectedCategory: Category = .Today
+    var selectedCategory: Category = .Work
     
     var categories: [Category] {
         return Category.allCategories()

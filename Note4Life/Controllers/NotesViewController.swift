@@ -16,7 +16,7 @@ let statusbarHeight = UIApplication.shared.statusBarFrame.height
 
 class NotesViewController: UIViewController {
     
-    var category: Category = .Today
+    var category: Category = .Work
     var selectedNote: Note?
 
     let searchBar: UISearchBar = {

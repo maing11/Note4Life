@@ -10,33 +10,33 @@ import UIKit
 
 
 enum Category: Int {
-    case Today = 0
-    case ThisWeek = 1
-    case Anytime = 2
-    case ThisYearGoal = 3
-    case NeedHelp = 4
-    case Project = 5
+    case Work = 0
+    case Home = 1
+    case Appoitment = 2
+    case Grocery = 3
+    case Fun = 4
+    case Resolution = 5
     case All = 6
     
     static func allCategories() -> [Category] {
-        return [Category.Today, Category.ThisWeek, Category.Anytime, Category.ThisYearGoal, Category.NeedHelp, Category.Project, Category.All]
+        return [Category.Work, Category.Home, Category.Appoitment, Category.Grocery, Category.Fun, Category.Resolution, Category.All]
     }
 }
 
 extension Category {
     func categoryImageName() -> String{
         switch self {
-        case .Today:
+        case .Work:
             return "icons8-today"
-        case .ThisWeek:
+        case .Home:
             return "icons8-calendar_plus"
-        case .ThisYearGoal:
+        case .Grocery:
             return "icons8-goal"
-        case .Anytime:
+        case .Appoitment:
             return "icons8-bread"
-        case .Project:
+        case .Resolution:
             return "icons8-presentation"
-        case .NeedHelp:
+        case .Fun:
             return "icons8-online_support"
         case .All:
             return "icons8-check_all"
@@ -46,18 +46,18 @@ extension Category {
     
     func categoryBackgroundImageName() -> String{
         switch self {
-        case .Today:
-            return "today"
-        case .ThisWeek:
-            return "thisweek"
-        case .ThisYearGoal:
-            return "goals"
-        case .Anytime:
-            return "anytime"
-        case .Project:
-            return "project"
-        case .NeedHelp:
-            return "needHelp"
+        case .Work:
+            return "work"
+        case .Home:
+            return "home"
+        case .Grocery:
+            return "grocery"
+        case .Appoitment:
+            return "appointment"
+        case .Resolution:
+            return "resolution"
+        case .Fun:
+            return "func"
         case .All:
             return "all"
         }
@@ -66,17 +66,17 @@ extension Category {
     
     func categoryName() -> String {
         switch self {
-        case .Today:
+        case .Work:
             return "Groceries"
-        case .ThisWeek:
+        case .Home:
             return "Work"
-        case .ThisYearGoal:
+        case .Grocery:
             return "Appointment"
-        case .Anytime:
+        case .Appoitment:
             return "Family"
-        case .Project:
+        case .Resolution:
             return "Home"
-        case .NeedHelp:
+        case .Fun:
             return "Whatever"
         case .All:
             return "All Notes"
@@ -85,17 +85,17 @@ extension Category {
     
     func categoryColor() -> UIColor {
         switch self {
-        case .Today:
+        case .Work:
             return ThemeColor.today.value
-        case .ThisWeek:
+        case .Home:
             return ThemeColor.thisWeek.value
-        case .ThisYearGoal:
+        case .Grocery:
             return ThemeColor.goals.value
-        case .Anytime:
+        case .Appoitment:
             return ThemeColor.anytime.value
-        case .Project:
+        case .Resolution:
             return ThemeColor.projects.value
-        case .NeedHelp:
+        case .Fun:
             return ThemeColor.needHelp.value
         case .All:
             return ThemeColor.all.value

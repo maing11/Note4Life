@@ -65,7 +65,7 @@ class BottomHideView: UIView {
         
         NotificationCenter.default.addObserver(self, selector: #selector(doneJsonLoading), name: .earthJsonLoaded, object: nil)
         
-        EarthTipsFactory.readJson(fileName: "earth", completion: { [weak self] earthTips in
+        TipsCreater.readJson(fileName: "earth", completion: { [weak self] earthTips in
             self?.earthTips = earthTips
         })
         

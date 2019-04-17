@@ -9,7 +9,7 @@
 import Foundation
 import NotificationCenter
 
-class EarthTipsFactory {
+class TipsCreater {
     static func readJson(fileName: String, completion: @escaping ([Tip]) -> () ) {
         
         var earthTips = [Tip]()

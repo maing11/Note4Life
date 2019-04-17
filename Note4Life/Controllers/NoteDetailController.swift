@@ -55,7 +55,7 @@ class NoteDetailController: UIViewController {
     }()
     
     var note: Note? = nil
-    var category: Category  = .Today
+    var category: Category  = .Work
     let placeholder = "Write you note here"
     
     var originalContent: String = ""

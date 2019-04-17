@@ -224,6 +224,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		333711742266FB63001D46C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3392D9DB2266F6C50007342A /* Category.swift */,
+				3392D9D92266F6C40007342A /* Tip.swift */,
+				3392D9DC2266F6C50007342A /* Note.swift */,
+				3392D9DA2266F6C50007342A /* RealmNote.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3392D6352266ECA30007342A = {
 			isa = PBXGroup;
 			children = (
@@ -245,10 +256,7 @@
 		3392D6402266ECA30007342A /* Note4Life */ = {
 			isa = PBXGroup;
 			children = (
-				3392D9DB2266F6C50007342A /* Category.swift */,
-				3392D9D92266F6C40007342A /* Tip.swift */,
-				3392D9DC2266F6C50007342A /* Note.swift */,
-				3392D9DA2266F6C50007342A /* RealmNote.swift */,
+				333711742266FB63001D46C5 /* Model */,
 				3392D8992266ED2F0007342A /* Controllers */,
 				3392D7482266ED060007342A /* View */,
 				3392D7412266ECFF0007342A /* Protocol */,
