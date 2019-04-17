@@ -2,8 +2,8 @@
 //  Note.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/27/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/27/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 
@@ -32,15 +32,15 @@ class Note {
     
 }
 
-extension Note: Persistable {
+extension Note: RealmStoreProtocol {
     
-    func write(dataSource: DataSourceable) {
+    func write(dataSource: RealmSourceProtocol) {
         self.lastEdited = Date()
         
         dataSource.store(object: self)
     }
     
-    func delete(dataSource: DataSourceable) {
+    func delete(dataSource: RealmSourceProtocol) {
         dataSource.delete(object: self)
     }
 }
@@ -48,12 +48,12 @@ extension Note: Persistable {
 
 extension Note {
     
-    convenience init(realmNote: RNote) {
+    convenience init(realmNote: RealmNote) {
         self.init(identifier: realmNote.identifier, content: realmNote.content, lastEdited: realmNote.lastEdited, categoryRaw: realmNote.categoryRaw, trashed: realmNote.trashed, hasDone: realmNote.hasDone)
     }
     
-    var realmNote: RNote {
-        return RNote(note: self)
+    var realmNote: RealmNote {
+        return RealmNote(note: self)
     }
     
 }

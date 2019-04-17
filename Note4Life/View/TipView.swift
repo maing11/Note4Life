@@ -2,13 +2,13 @@
 //  EarthCardView.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/31/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/31/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import UIKit
 
-class EarthCardView: UIView {
+class TipView: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var imageView: UIImageView!

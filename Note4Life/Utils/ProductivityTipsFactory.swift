@@ -2,17 +2,17 @@
 //  JSONFactory.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/29/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/29/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import Foundation
 import NotificationCenter
 
 class EarthTipsFactory {
-    static func readJson(fileName: String, completion: @escaping ([EarthTip]) -> () ) {
+    static func readJson(fileName: String, completion: @escaping ([Tip]) -> () ) {
         
-        var earthTips = [EarthTip]()
+        var earthTips = [Tip]()
         DispatchQueue.global().async {
             do {
                 if let file = Bundle.main.url(forResource: fileName, withExtension: "json") {
@@ -27,7 +27,7 @@ class EarthTipsFactory {
                             guard let obj = obj as? [String: String] else {return}
                             let title = obj["title"]
                             let body = obj["body"]
-                            var tip = EarthTip()
+                            var tip = Tip()
                             tip.title = title ?? ""
                             tip.body = body ?? ""
                             earthTips.append(tip)

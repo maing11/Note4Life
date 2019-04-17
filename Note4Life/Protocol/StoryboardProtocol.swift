@@ -2,18 +2,18 @@
 //  StoryboardProtocol.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 4/2/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 4/2/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-protocol Storyboardable: class {
+protocol StoryboardProtocol: class {
     static var storyboardName: String { get }
 }
 
-extension Storyboardable where Self: UIViewController {
+extension StoryboardProtocol where Self: UIViewController {
     static var storyboardName: String {
         return String(describing: self)
     }
@@ -29,4 +29,4 @@ extension Storyboardable where Self: UIViewController {
     }
 }
 
-extension UIViewController: Storyboardable { }
+extension UIViewController: StoryboardProtocol { }

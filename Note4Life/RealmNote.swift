@@ -2,14 +2,14 @@
 //  RNote.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/27/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/27/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 
-class RNote: Object {
+class RealmNote: Object {
     
     @objc dynamic var identifier: String = ""
     @objc dynamic var content: String = ""
@@ -24,7 +24,7 @@ class RNote: Object {
     
 }
 
-extension RNote {
+extension RealmNote {
     
     convenience init(note: Note) {
         self.init()

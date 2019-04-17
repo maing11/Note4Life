@@ -2,8 +2,8 @@
 //  UIColor+Extensions.swift
 //  StockPerformance
 //
-//  Created by Larry Nguyen on 2/27/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 2/27/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import UIKit

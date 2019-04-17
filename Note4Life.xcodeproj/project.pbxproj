@@ -64,7 +64,7 @@
 		3392D7222266ECEB0007342A /* 47.png in Resources */ = {isa = PBXBuildFile; fileRef = 3392D6BC2266ECEB0007342A /* 47.png */; };
 		3392D7232266ECEB0007342A /* 46.png in Resources */ = {isa = PBXBuildFile; fileRef = 3392D6BD2266ECEB0007342A /* 46.png */; };
 		3392D7242266ECEB0007342A /* OnboardingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3392D6BE2266ECEB0007342A /* OnboardingStoryboard.storyboard */; };
-		3392D72C2266ECF20007342A /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7262266ECF20007342A /* AppColor.swift */; };
+		3392D72C2266ECF20007342A /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7262266ECF20007342A /* ThemeColor.swift */; };
 		3392D72D2266ECF20007342A /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7272266ECF20007342A /* Globals.swift */; };
 		3392D72E2266ECF20007342A /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7282266ECF20007342A /* AppTheme.swift */; };
 		3392D72F2266ECF20007342A /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7292266ECF20007342A /* Defaults.swift */; };
@@ -77,31 +77,31 @@
 		3392D73E2266ECF90007342A /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7372266ECF90007342A /* UIImage+Extension.swift */; };
 		3392D73F2266ECF90007342A /* UIVIewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7382266ECF90007342A /* UIVIewController+Extension.swift */; };
 		3392D7402266ECF90007342A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7392266ECF90007342A /* String+Extension.swift */; };
-		3392D7452266ECFF0007342A /* DataSourceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7422266ECFF0007342A /* DataSourceable.swift */; };
-		3392D7462266ECFF0007342A /* Persistable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7432266ECFF0007342A /* Persistable.swift */; };
+		3392D7452266ECFF0007342A /* RealmSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7422266ECFF0007342A /* RealmSourceProtocol.swift */; };
+		3392D7462266ECFF0007342A /* RealmStoreProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7432266ECFF0007342A /* RealmStoreProtocol.swift */; };
 		3392D7472266ECFF0007342A /* StoryboardProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7442266ECFF0007342A /* StoryboardProtocol.swift */; };
 		3392D7582266ED060007342A /* ProductivityTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7492266ED060007342A /* ProductivityTip.swift */; };
-		3392D7592266ED060007342A /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74A2266ED060007342A /* CategoryView.swift */; };
-		3392D75A2266ED060007342A /* EarthTipDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74B2266ED060007342A /* EarthTipDetailView.swift */; };
+		3392D7592266ED060007342A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74A2266ED060007342A /* HomeView.swift */; };
+		3392D75A2266ED060007342A /* TipDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74B2266ED060007342A /* TipDetailView.swift */; };
 		3392D75B2266ED060007342A /* VisibleTipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3392D74C2266ED060007342A /* VisibleTipView.xib */; };
 		3392D75C2266ED060007342A /* LLAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74E2266ED060007342A /* LLAlertController.swift */; };
-		3392D75D2266ED060007342A /* BottomPullView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74F2266ED060007342A /* BottomPullView.swift */; };
+		3392D75D2266ED060007342A /* BottomHideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D74F2266ED060007342A /* BottomHideView.swift */; };
 		3392D75E2266ED060007342A /* EarthCardCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3392D7502266ED060007342A /* EarthCardCollectionCell.xib */; };
 		3392D75F2266ED060007342A /* EarthCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3392D7512266ED060007342A /* EarthCardView.xib */; };
 		3392D7602266ED060007342A /* EarthCardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7522266ED060007342A /* EarthCardCollectionCell.swift */; };
 		3392D7612266ED060007342A /* VisibleTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7532266ED060007342A /* VisibleTipView.swift */; };
-		3392D7622266ED060007342A /* EarthCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7542266ED060007342A /* EarthCardView.swift */; };
+		3392D7622266ED060007342A /* TipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7542266ED060007342A /* TipView.swift */; };
 		3392D7632266ED060007342A /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3392D7552266ED060007342A /* CategoryView.xib */; };
 		3392D7642266ED060007342A /* ThingsNoteTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7562266ED060007342A /* ThingsNoteTableCell.swift */; };
-		3392D7652266ED060007342A /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7572266ED060007342A /* CategoryCollectionCell.swift */; };
-		3392D89F2266ED300007342A /* NotesOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D89A2266ED2F0007342A /* NotesOnboardingViewController.swift */; };
+		3392D7652266ED060007342A /* HomeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D7572266ED060007342A /* HomeCollectionCell.swift */; };
+		3392D89F2266ED300007342A /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D89A2266ED2F0007342A /* OnboardingViewController.swift */; };
 		3392D8A02266ED300007342A /* NoteDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D89B2266ED2F0007342A /* NoteDetailController.swift */; };
-		3392D8A12266ED300007342A /* TrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D89C2266ED2F0007342A /* TrashViewController.swift */; };
+		3392D8A12266ED300007342A /* BinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D89C2266ED2F0007342A /* BinViewController.swift */; };
 		3392D8A22266ED300007342A /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D89D2266ED2F0007342A /* NotesViewController.swift */; };
-		3392D8A32266ED300007342A /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D89E2266ED2F0007342A /* CategoryViewController.swift */; };
+		3392D8A32266ED300007342A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D89E2266ED2F0007342A /* HomeViewController.swift */; };
 		3392D8A52266ED490007342A /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D8A42266ED490007342A /* ViewControllerFactory.swift */; };
-		3392D9DD2266F6C60007342A /* EarthTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D9D92266F6C40007342A /* EarthTip.swift */; };
-		3392D9DE2266F6C60007342A /* RNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D9DA2266F6C50007342A /* RNote.swift */; };
+		3392D9DD2266F6C60007342A /* Tip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D9D92266F6C40007342A /* Tip.swift */; };
+		3392D9DE2266F6C60007342A /* RealmNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D9DA2266F6C50007342A /* RealmNote.swift */; };
 		3392D9DF2266F6C60007342A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D9DB2266F6C50007342A /* Category.swift */; };
 		3392D9E02266F6C60007342A /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3392D9DC2266F6C50007342A /* Note.swift */; };
 		D9023679751F854DDF7DC5B6 /* Pods_Note4Life.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E27BD75939C2755779F3BE22 /* Pods_Note4Life.framework */; };
@@ -167,7 +167,7 @@
 		3392D6BC2266ECEB0007342A /* 47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 47.png; sourceTree = "<group>"; };
 		3392D6BD2266ECEB0007342A /* 46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 46.png; sourceTree = "<group>"; };
 		3392D6BE2266ECEB0007342A /* OnboardingStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = OnboardingStoryboard.storyboard; sourceTree = "<group>"; };
-		3392D7262266ECF20007342A /* AppColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		3392D7262266ECF20007342A /* ThemeColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		3392D7272266ECF20007342A /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		3392D7282266ECF20007342A /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		3392D7292266ECF20007342A /* Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
@@ -180,31 +180,31 @@
 		3392D7372266ECF90007342A /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		3392D7382266ECF90007342A /* UIVIewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIVIewController+Extension.swift"; sourceTree = "<group>"; };
 		3392D7392266ECF90007342A /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		3392D7422266ECFF0007342A /* DataSourceable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceable.swift; sourceTree = "<group>"; };
-		3392D7432266ECFF0007342A /* Persistable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistable.swift; sourceTree = "<group>"; };
+		3392D7422266ECFF0007342A /* RealmSourceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmSourceProtocol.swift; sourceTree = "<group>"; };
+		3392D7432266ECFF0007342A /* RealmStoreProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmStoreProtocol.swift; sourceTree = "<group>"; };
 		3392D7442266ECFF0007342A /* StoryboardProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardProtocol.swift; sourceTree = "<group>"; };
 		3392D7492266ED060007342A /* ProductivityTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductivityTip.swift; sourceTree = "<group>"; };
-		3392D74A2266ED060007342A /* CategoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
-		3392D74B2266ED060007342A /* EarthTipDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthTipDetailView.swift; sourceTree = "<group>"; };
+		3392D74A2266ED060007342A /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3392D74B2266ED060007342A /* TipDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipDetailView.swift; sourceTree = "<group>"; };
 		3392D74C2266ED060007342A /* VisibleTipView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VisibleTipView.xib; sourceTree = "<group>"; };
 		3392D74E2266ED060007342A /* LLAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LLAlertController.swift; sourceTree = "<group>"; };
-		3392D74F2266ED060007342A /* BottomPullView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomPullView.swift; sourceTree = "<group>"; };
+		3392D74F2266ED060007342A /* BottomHideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomHideView.swift; sourceTree = "<group>"; };
 		3392D7502266ED060007342A /* EarthCardCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EarthCardCollectionCell.xib; sourceTree = "<group>"; };
 		3392D7512266ED060007342A /* EarthCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EarthCardView.xib; sourceTree = "<group>"; };
 		3392D7522266ED060007342A /* EarthCardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthCardCollectionCell.swift; sourceTree = "<group>"; };
 		3392D7532266ED060007342A /* VisibleTipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisibleTipView.swift; sourceTree = "<group>"; };
-		3392D7542266ED060007342A /* EarthCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthCardView.swift; sourceTree = "<group>"; };
+		3392D7542266ED060007342A /* TipView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipView.swift; sourceTree = "<group>"; };
 		3392D7552266ED060007342A /* CategoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
 		3392D7562266ED060007342A /* ThingsNoteTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThingsNoteTableCell.swift; sourceTree = "<group>"; };
-		3392D7572266ED060007342A /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
-		3392D89A2266ED2F0007342A /* NotesOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesOnboardingViewController.swift; sourceTree = "<group>"; };
+		3392D7572266ED060007342A /* HomeCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionCell.swift; sourceTree = "<group>"; };
+		3392D89A2266ED2F0007342A /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		3392D89B2266ED2F0007342A /* NoteDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteDetailController.swift; sourceTree = "<group>"; };
-		3392D89C2266ED2F0007342A /* TrashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrashViewController.swift; sourceTree = "<group>"; };
+		3392D89C2266ED2F0007342A /* BinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BinViewController.swift; sourceTree = "<group>"; };
 		3392D89D2266ED2F0007342A /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
-		3392D89E2266ED2F0007342A /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		3392D89E2266ED2F0007342A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		3392D8A42266ED490007342A /* ViewControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
-		3392D9D92266F6C40007342A /* EarthTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthTip.swift; sourceTree = "<group>"; };
-		3392D9DA2266F6C50007342A /* RNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RNote.swift; sourceTree = "<group>"; };
+		3392D9D92266F6C40007342A /* Tip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tip.swift; sourceTree = "<group>"; };
+		3392D9DA2266F6C50007342A /* RealmNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmNote.swift; sourceTree = "<group>"; };
 		3392D9DB2266F6C50007342A /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		3392D9DC2266F6C50007342A /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		E27BD75939C2755779F3BE22 /* Pods_Note4Life.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Note4Life.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,9 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				3392D9DB2266F6C50007342A /* Category.swift */,
-				3392D9D92266F6C40007342A /* EarthTip.swift */,
+				3392D9D92266F6C40007342A /* Tip.swift */,
 				3392D9DC2266F6C50007342A /* Note.swift */,
-				3392D9DA2266F6C50007342A /* RNote.swift */,
+				3392D9DA2266F6C50007342A /* RealmNote.swift */,
 				3392D8992266ED2F0007342A /* Controllers */,
 				3392D7482266ED060007342A /* View */,
 				3392D7412266ECFF0007342A /* Protocol */,
@@ -344,7 +344,7 @@
 		3392D7252266ECF20007342A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3392D7262266ECF20007342A /* AppColor.swift */,
+				3392D7262266ECF20007342A /* ThemeColor.swift */,
 				3392D7272266ECF20007342A /* Globals.swift */,
 				3392D7282266ECF20007342A /* AppTheme.swift */,
 				3392D7292266ECF20007342A /* Defaults.swift */,
@@ -371,8 +371,8 @@
 		3392D7412266ECFF0007342A /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
-				3392D7422266ECFF0007342A /* DataSourceable.swift */,
-				3392D7432266ECFF0007342A /* Persistable.swift */,
+				3392D7422266ECFF0007342A /* RealmSourceProtocol.swift */,
+				3392D7432266ECFF0007342A /* RealmStoreProtocol.swift */,
 				3392D7442266ECFF0007342A /* StoryboardProtocol.swift */,
 			);
 			path = Protocol;
@@ -382,39 +382,39 @@
 			isa = PBXGroup;
 			children = (
 				3392D7492266ED060007342A /* ProductivityTip.swift */,
-				3392D74A2266ED060007342A /* CategoryView.swift */,
-				3392D74B2266ED060007342A /* EarthTipDetailView.swift */,
+				3392D74A2266ED060007342A /* HomeView.swift */,
+				3392D74B2266ED060007342A /* TipDetailView.swift */,
 				3392D74C2266ED060007342A /* VisibleTipView.xib */,
-				3392D74D2266ED060007342A /* LLNAlert */,
-				3392D74F2266ED060007342A /* BottomPullView.swift */,
+				3392D74D2266ED060007342A /* MyAlert */,
+				3392D74F2266ED060007342A /* BottomHideView.swift */,
 				3392D7502266ED060007342A /* EarthCardCollectionCell.xib */,
 				3392D7512266ED060007342A /* EarthCardView.xib */,
 				3392D7522266ED060007342A /* EarthCardCollectionCell.swift */,
 				3392D7532266ED060007342A /* VisibleTipView.swift */,
-				3392D7542266ED060007342A /* EarthCardView.swift */,
+				3392D7542266ED060007342A /* TipView.swift */,
 				3392D7552266ED060007342A /* CategoryView.xib */,
 				3392D7562266ED060007342A /* ThingsNoteTableCell.swift */,
-				3392D7572266ED060007342A /* CategoryCollectionCell.swift */,
+				3392D7572266ED060007342A /* HomeCollectionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		3392D74D2266ED060007342A /* LLNAlert */ = {
+		3392D74D2266ED060007342A /* MyAlert */ = {
 			isa = PBXGroup;
 			children = (
 				3392D74E2266ED060007342A /* LLAlertController.swift */,
 			);
-			path = LLNAlert;
+			path = MyAlert;
 			sourceTree = "<group>";
 		};
 		3392D8992266ED2F0007342A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3392D89A2266ED2F0007342A /* NotesOnboardingViewController.swift */,
+				3392D89A2266ED2F0007342A /* OnboardingViewController.swift */,
 				3392D89B2266ED2F0007342A /* NoteDetailController.swift */,
-				3392D89C2266ED2F0007342A /* TrashViewController.swift */,
+				3392D89C2266ED2F0007342A /* BinViewController.swift */,
 				3392D89D2266ED2F0007342A /* NotesViewController.swift */,
-				3392D89E2266ED2F0007342A /* CategoryViewController.swift */,
+				3392D89E2266ED2F0007342A /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -622,38 +622,38 @@
 				3392D7612266ED060007342A /* VisibleTipView.swift in Sources */,
 				3392D73A2266ECF90007342A /* UIAlertController+Extension.swift in Sources */,
 				3392D72D2266ECF20007342A /* Globals.swift in Sources */,
-				3392D75A2266ED060007342A /* EarthTipDetailView.swift in Sources */,
+				3392D75A2266ED060007342A /* TipDetailView.swift in Sources */,
 				3392D7582266ED060007342A /* ProductivityTip.swift in Sources */,
 				3392D7642266ED060007342A /* ThingsNoteTableCell.swift in Sources */,
 				3392D9E02266F6C60007342A /* Note.swift in Sources */,
 				3392D8A52266ED490007342A /* ViewControllerFactory.swift in Sources */,
-				3392D9DE2266F6C60007342A /* RNote.swift in Sources */,
-				3392D7652266ED060007342A /* CategoryCollectionCell.swift in Sources */,
+				3392D9DE2266F6C60007342A /* RealmNote.swift in Sources */,
+				3392D7652266ED060007342A /* HomeCollectionCell.swift in Sources */,
 				3392D6422266ECA30007342A /* AppDelegate.swift in Sources */,
 				3392D6552266ECDA0007342A /* RealmDataPersistence.swift in Sources */,
 				3392D7302266ECF20007342A /* StoreReviewHelper.swift in Sources */,
-				3392D7462266ECFF0007342A /* Persistable.swift in Sources */,
+				3392D7462266ECFF0007342A /* RealmStoreProtocol.swift in Sources */,
 				3392D7472266ECFF0007342A /* StoryboardProtocol.swift in Sources */,
 				3392D72F2266ECF20007342A /* Defaults.swift in Sources */,
 				3392D73D2266ECF90007342A /* UIView+Extension.swift in Sources */,
-				3392D8A32266ED300007342A /* CategoryViewController.swift in Sources */,
-				3392D72C2266ECF20007342A /* AppColor.swift in Sources */,
+				3392D8A32266ED300007342A /* HomeViewController.swift in Sources */,
+				3392D72C2266ECF20007342A /* ThemeColor.swift in Sources */,
 				3392D7312266ECF20007342A /* ProductivityTipsFactory.swift in Sources */,
-				3392D7592266ED060007342A /* CategoryView.swift in Sources */,
+				3392D7592266ED060007342A /* HomeView.swift in Sources */,
 				3392D72E2266ECF20007342A /* AppTheme.swift in Sources */,
 				3392D8A02266ED300007342A /* NoteDetailController.swift in Sources */,
 				3392D7602266ED060007342A /* EarthCardCollectionCell.swift in Sources */,
 				3392D73C2266ECF90007342A /* UImageView+Extension.swift in Sources */,
-				3392D8A12266ED300007342A /* TrashViewController.swift in Sources */,
-				3392D75D2266ED060007342A /* BottomPullView.swift in Sources */,
+				3392D8A12266ED300007342A /* BinViewController.swift in Sources */,
+				3392D75D2266ED060007342A /* BottomHideView.swift in Sources */,
 				3392D7402266ECF90007342A /* String+Extension.swift in Sources */,
-				3392D7452266ECFF0007342A /* DataSourceable.swift in Sources */,
+				3392D7452266ECFF0007342A /* RealmSourceProtocol.swift in Sources */,
 				3392D73B2266ECF90007342A /* UIColor+Extension.swift in Sources */,
 				3392D8A22266ED300007342A /* NotesViewController.swift in Sources */,
 				3392D9DF2266F6C60007342A /* Category.swift in Sources */,
-				3392D89F2266ED300007342A /* NotesOnboardingViewController.swift in Sources */,
-				3392D7622266ED060007342A /* EarthCardView.swift in Sources */,
-				3392D9DD2266F6C60007342A /* EarthTip.swift in Sources */,
+				3392D89F2266ED300007342A /* OnboardingViewController.swift in Sources */,
+				3392D7622266ED060007342A /* TipView.swift in Sources */,
+				3392D9DD2266F6C60007342A /* Tip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

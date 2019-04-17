@@ -2,14 +2,14 @@
 //  EarthTip.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/31/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/31/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import Foundation
 
 
-struct EarthTip {
+struct Tip {
     var title: String = ""
     var body: String = "" {
         didSet {

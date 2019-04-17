@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let onboarding: NotesOnboardingViewController = ViewControllerFactor.createViewControler(in: "OnboardingStoryboard", id: "NotesOnboardingViewController") as! NotesOnboardingViewController
+        let onboarding: OnboardingViewController = ViewControllerCreator.createViewControler(in: "OnboardingStoryboard", id: "NotesOnboardingViewController") as! OnboardingViewController
         if Defaults.getUserFirstOpenStatus.firstTimeOpen == true {
             window?.rootViewController = onboarding
         } else {
-            window?.rootViewController = UINavigationController(rootViewController: CategoryViewController(realmDataPersistence: realmDataPersistence))
+            window?.rootViewController = UINavigationController(rootViewController: HomeViewController(realmDataPersistence: realmDataPersistence))
         }
         
         window?.makeKeyAndVisible()

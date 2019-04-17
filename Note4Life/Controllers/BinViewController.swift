@@ -2,13 +2,13 @@
 //  TrashViewController.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/28/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/28/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import UIKit
 
-class TrashViewController: UIViewController {
+class BinViewController: UIViewController {
     
     let tableView: UITableView = {
         let tableView = UITableView()
@@ -186,7 +186,7 @@ class TrashViewController: UIViewController {
     
 }
 
-extension TrashViewController: UITableViewDelegate {
+extension BinViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
      
@@ -204,7 +204,7 @@ extension TrashViewController: UITableViewDelegate {
 }
 
 
-extension TrashViewController: UITableViewDataSource {
+extension BinViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ThingsNoteTableCell.identifier, for: indexPath) as! ThingsNoteTableCell
@@ -220,7 +220,7 @@ extension TrashViewController: UITableViewDataSource {
     
 }
 
-extension TrashViewController {
+extension BinViewController {
     func daysBetween(date1: Date, date2: Date) -> Int {
         
         let calendar: Calendar = Calendar.current

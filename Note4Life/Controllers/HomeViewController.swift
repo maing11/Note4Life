@@ -2,13 +2,13 @@
 //  CategoryViewController.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/28/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/28/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import UIKit
 
-class CategoryViewController: UIViewController {
+class HomeViewController: UIViewController {
     weak var collectionView: UICollectionView!
     
     lazy var collectionViewLayout : UICollectionViewFlowLayout = {
@@ -33,8 +33,8 @@ class CategoryViewController: UIViewController {
     
     var catCount: [Category: Int] = [:]
     
-    private var bottomPullView: BottomPullView!
-    private var earthTipView: EarthTipDetailView!
+    private var bottomPullView: BottomHideView!
+    private var earthTipView: TipDetailView!
     
     private var bottomViewToViewConstraint: NSLayoutConstraint!
     private var originalBottomTopConstant: CGFloat = 0.0
@@ -76,7 +76,7 @@ class CategoryViewController: UIViewController {
         self.collectionView.delegate = self
         self.collectionView.setCollectionViewLayout(collectionViewLayout, animated: true)
       
-        collectionView.register(CategoryCollectionCell.self, forCellWithReuseIdentifier: CategoryCollectionCell.identifier)
+        collectionView.register(HomeCollectionCell.self, forCellWithReuseIdentifier: HomeCollectionCell.identifier)
         
         setupBottomPullView()
         setupEartTipDetailView()
@@ -124,7 +124,7 @@ class CategoryViewController: UIViewController {
     
     private func setupBottomPullView() {
         let firstPositionY: CGFloat = -70
-        bottomPullView = BottomPullView(frame: CGRect(x: 0, y: firstPositionY, width: screenWidth, height: screenHeight))
+        bottomPullView = BottomHideView(frame: CGRect(x: 0, y: firstPositionY, width: screenWidth, height: screenHeight))
         bottomPullView.state = .upgrade
         
         let pullGesture = UIPanGestureRecognizer(target: self, action: #selector(drawerSliding))
@@ -154,7 +154,7 @@ class CategoryViewController: UIViewController {
     }
     
     private func setupEartTipDetailView(){
-        let view = EarthTipDetailView()
+        let view = TipDetailView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 10
         
@@ -170,7 +170,7 @@ class CategoryViewController: UIViewController {
         self.earthTipView = view
     }
     
-    func popoutEarthTipView(tip: EarthTip){
+    func popoutEarthTipView(tip: Tip){
         self.earthTipView.bodyContentLabel.text = tip.body
         self.earthTipView.visibleTipView.viewLabel.text = tip.title
         self.earthTipView.visibleTipView.imageView.image = UIImage(named: tip.imageString ?? "1")
@@ -233,7 +233,7 @@ class CategoryViewController: UIViewController {
     }
 }
 
-extension CategoryViewController: UICollectionViewDelegate {
+extension HomeViewController: UICollectionViewDelegate {
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.selectedCategory = categories[indexPath.row]
@@ -244,13 +244,13 @@ extension CategoryViewController: UICollectionViewDelegate {
 }
 
 
-extension CategoryViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CategoryCollectionCell.identifier, for: indexPath) as! CategoryCollectionCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeCollectionCell.identifier, for: indexPath) as! HomeCollectionCell
         cell.category = self.categories[indexPath.row]
         if let cat = cell.category, let count = catCount[cat] {
              cell.categoryView.countLabel.text = "\(count)"
@@ -267,7 +267,7 @@ extension CategoryViewController: UICollectionViewDataSource {
 
 }
 
-extension CategoryViewController: UICollectionViewDelegateFlowLayout {
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if categories[indexPath.row] == .All {
               return CGSize(width: collectionView.bounds.size.width - 20, height: 150)
@@ -283,12 +283,12 @@ extension CategoryViewController: UICollectionViewDelegateFlowLayout {
 
 }
 
-extension CategoryViewController: EarthTipSelectProtocol {
+extension HomeViewController: EarthTipSelectProtocol {
     func didSelectImages(count: Int, images: [UIImage]) {
         
     }
     
-    func didSelectEarthTip(tip: EarthTip) {
+    func didSelectEarthTip(tip: Tip) {
          popoutEarthTipView(tip: tip)
     }
 }

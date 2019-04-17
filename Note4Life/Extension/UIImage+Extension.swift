@@ -2,15 +2,14 @@
 //  UIImage+Extension.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/29/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/29/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import UIKit
 
 extension UIImage {
     
-    // https://stackoverflow.com/a/45936836/6303785
     func scale(to newSize: CGSize) -> UIImage {
         
         let horizontalRatio = newSize.width / self.size.width

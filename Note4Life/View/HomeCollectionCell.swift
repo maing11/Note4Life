@@ -2,13 +2,13 @@
 //  CategoryCollectionCell.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/28/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/28/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import UIKit
 
-class CategoryCollectionCell: UICollectionViewCell {
+class HomeCollectionCell: UICollectionViewCell {
     
     var actionButtonClosure: VoidClosure?
 
@@ -53,8 +53,8 @@ class CategoryCollectionCell: UICollectionViewCell {
         }
     }
     
-    let categoryView: CategoryView = {
-        let view = CategoryView()
+    let categoryView: HomeView = {
+        let view = HomeView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = UIColor(red: 64/255, green: 64/255, blue: 64/255, alpha: 1.0)
         view.layer.cornerRadius = 10

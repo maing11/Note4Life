@@ -2,8 +2,8 @@
 //  NotesViewController.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/27/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/27/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 
@@ -63,8 +63,8 @@ class NotesViewController: UIViewController {
     }()
     
     
-    private var earthTipView: EarthTipDetailView!
-    private var bottomPullView: BottomPullView!
+    private var earthTipView: TipDetailView!
+    private var bottomPullView: BottomHideView!
     
     private var bottomViewToViewConstraint: NSLayoutConstraint!
     private var originalBottomTopConstant: CGFloat = 0.0
@@ -173,7 +173,7 @@ class NotesViewController: UIViewController {
     
     private func setupBottomPullView() {
         let firstPositionY: CGFloat = -70
-        bottomPullView = BottomPullView(frame: CGRect(x: 0, y: firstPositionY, width: screenWidth, height: screenWidth))
+        bottomPullView = BottomHideView(frame: CGRect(x: 0, y: firstPositionY, width: screenWidth, height: screenWidth))
         
         let pullGesture = UIPanGestureRecognizer(target: self, action: #selector(drawerSliding))
         bottomPullView.visibleTipView.addGestureRecognizer(pullGesture)
@@ -199,7 +199,7 @@ class NotesViewController: UIViewController {
     }
     
     private func setupEartTipDetailView(){
-        let view = EarthTipDetailView()
+        let view = TipDetailView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 10
         
@@ -258,7 +258,7 @@ class NotesViewController: UIViewController {
         }
     }
     
-    func popoutEarthTipView(tip: EarthTip){
+    func popoutEarthTipView(tip: Tip){
         self.earthTipView.bodyContentLabel.text = tip.body
         self.earthTipView.visibleTipView.viewLabel.text = tip.title
         self.earthTipView.visibleTipView.imageView.image = UIImage(named: tip.imageString ?? "1")
@@ -284,7 +284,7 @@ class NotesViewController: UIViewController {
     }
     
     @objc func trashPressed(_ sender: UIButton){
-        let viewController = TrashViewController(realmDataPersistence:self.realmDataPersistence)
+        let viewController = BinViewController(realmDataPersistence:self.realmDataPersistence)
         self.present(viewController, animated: true, completion: nil)
     }
     
@@ -409,7 +409,7 @@ extension NotesViewController: UISearchBarDelegate {
 
 
 extension NotesViewController: EarthTipSelectProtocol {
-    func didSelectEarthTip(tip: EarthTip) {
+    func didSelectEarthTip(tip: Tip) {
         popoutEarthTipView(tip: tip)
     }
     

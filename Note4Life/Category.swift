@@ -2,8 +2,8 @@
 //  Category.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/27/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/27/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import UIKit
@@ -86,19 +86,19 @@ extension Category {
     func categoryColor() -> UIColor {
         switch self {
         case .Today:
-            return AppColor.today.value
+            return ThemeColor.today.value
         case .ThisWeek:
-            return AppColor.thisWeek.value
+            return ThemeColor.thisWeek.value
         case .ThisYearGoal:
-            return AppColor.goals.value
+            return ThemeColor.goals.value
         case .Anytime:
-            return AppColor.anytime.value
+            return ThemeColor.anytime.value
         case .Project:
-            return AppColor.projects.value
+            return ThemeColor.projects.value
         case .NeedHelp:
-            return AppColor.needHelp.value
+            return ThemeColor.needHelp.value
         case .All:
-            return AppColor.all.value
+            return ThemeColor.all.value
         }
     }
 }

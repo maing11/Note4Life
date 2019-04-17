@@ -2,14 +2,14 @@
 //  BottomPullView.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/31/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/31/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import UIKit
 
 protocol EarthTipSelectProtocol {
-    func didSelectEarthTip(tip: EarthTip)
+    func didSelectEarthTip(tip: Tip)
     func didSelectImages(count: Int, images: [UIImage])
 }
 
@@ -18,7 +18,7 @@ enum BottomPullViewState {
     case upgrade
 }
 
-class BottomPullView: UIView {
+class BottomHideView: UIView {
     
     var state: BottomPullViewState {
         didSet {
@@ -29,7 +29,7 @@ class BottomPullView: UIView {
     private let collectionCellName = "EarthCardCollectionCell"
     private let collectionCellId = "collectionCellId"
     
-    var earthTips: [EarthTip] {
+    var earthTips: [Tip] {
         didSet {
             if !earthTips.isEmpty {
                 let random = Int.random(in: 1...(earthTips.count - 1))
@@ -40,7 +40,7 @@ class BottomPullView: UIView {
     }
     
     var delegate: EarthTipSelectProtocol?
-    var showedTip: EarthTip?
+    var showedTip: Tip?
 
     private var collectionViewLayout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
@@ -198,13 +198,13 @@ class BottomPullView: UIView {
     
 }
 
-extension BottomPullView: UICollectionViewDelegate{
+extension BottomHideView: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didSelectEarthTip(tip: earthTips[indexPath.row])
     }
 }
 
-extension BottomPullView: UICollectionViewDataSource {
+extension BottomHideView: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

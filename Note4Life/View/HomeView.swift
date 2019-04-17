@@ -2,13 +2,13 @@
 //  CategoryView.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/28/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/28/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import UIKit
 
-class CategoryView: UIView {
+class HomeView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var categoryImageView: UIImageView!

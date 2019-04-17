@@ -2,13 +2,13 @@
 //  DataSourceable.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/27/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/27/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import Foundation
 
-protocol DataSourceable {
+protocol RealmSourceProtocol {
     func store<T>(object: T)
     func delete<T>(object: T)
 }

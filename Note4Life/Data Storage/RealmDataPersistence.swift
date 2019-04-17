@@ -2,17 +2,17 @@
 //  RealmDataPersistence.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 3/27/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 3/27/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import Foundation
 import RealmSwift
 
-class RealmDataPersistence: DataSourceable {
+class RealmDataPersistence: RealmSourceProtocol {
     
     var notes: [Note] {
-        let objects = realm.objects(RNote.self).sorted(byKeyPath: "lastEdited", ascending: false)
+        let objects = realm.objects(RealmNote.self).sorted(byKeyPath: "lastEdited", ascending: false)
         
         return objects.map {
             return $0.note
@@ -20,7 +20,7 @@ class RealmDataPersistence: DataSourceable {
     }
     
     func notesWithFilter(category: Category,filter: String) -> [Note] {
-        let objects = realm.objects(RNote.self).sorted(byKeyPath: "lastEdited", ascending: false)
+        let objects = realm.objects(RealmNote.self).sorted(byKeyPath: "lastEdited", ascending: false)
         var myObjects = objects
         if filter != "" {
             myObjects = objects.filter("content CONTAINS[cd] %@", filter).sorted(byKeyPath: "lastEdited", ascending: false)
@@ -41,7 +41,7 @@ class RealmDataPersistence: DataSourceable {
     }
     
     func trashedNotesWithFilter(isTrashed: Bool) -> [Note] {
-        let objects = realm.objects(RNote.self).sorted(byKeyPath: "lastEdited", ascending: false)
+        let objects = realm.objects(RealmNote.self).sorted(byKeyPath: "lastEdited", ascending: false)
         return objects.map {
             return $0.note
             }.filter{
@@ -75,7 +75,7 @@ class RealmDataPersistence: DataSourceable {
         }
         
         // Delete our note
-        if let realmNote = self.realm.object(ofType: RNote.self, forPrimaryKey: note.identifier) {
+        if let realmNote = self.realm.object(ofType: RealmNote.self, forPrimaryKey: note.identifier) {
             self.realm.beginWrite()
             self.realm.delete(realmNote)
             try? self.realm.commitWrite()

@@ -2,15 +2,15 @@
 //  NotesOnboardingViewController.swift
 //  Things+
 //
-//  Created by Larry Nguyen on 4/2/19.
-//  Copyright © 2019 Larry. All rights reserved.
+//  Created by Mai Nguyen on 4/2/19.
+//  Copyright © 2019 AppArt. All rights reserved.
 //
 
 import UIKit
 import paper_onboarding
 
 
-class NotesOnboardingViewController: UIViewController {
+class OnboardingViewController: UIViewController {
     
     @IBOutlet var skipButton: UIButton!
     
@@ -69,12 +69,12 @@ class NotesOnboardingViewController: UIViewController {
 
 // MARK: Actions
 
-extension NotesOnboardingViewController {
+extension OnboardingViewController {
     
     @IBAction func skipButtonTapped(_: UIButton) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         Defaults.saveFirstTimeOpenBool(false)
-        let nav = UINavigationController(rootViewController: CategoryViewController(realmDataPersistence: appDelegate.realmDataPersistence))
+        let nav = UINavigationController(rootViewController: HomeViewController(realmDataPersistence: appDelegate.realmDataPersistence))
         self.present(nav, animated: true) {
             
         }
@@ -83,7 +83,7 @@ extension NotesOnboardingViewController {
 
 // MARK: PaperOnboardingDelegate
 
-extension NotesOnboardingViewController: PaperOnboardingDelegate {
+extension OnboardingViewController: PaperOnboardingDelegate {
     
     func onboardingWillTransitonToIndex(_ index: Int) {
         skipButton.isHidden = index == 2 ? false : true
@@ -101,7 +101,7 @@ extension NotesOnboardingViewController: PaperOnboardingDelegate {
 
 // MARK: PaperOnboardingDataSource
 
-extension NotesOnboardingViewController: PaperOnboardingDataSource {
+extension OnboardingViewController: PaperOnboardingDataSource {
     
     func onboardingItem(at index: Int) -> OnboardingItemInfo {
         return items[index]
@@ -125,7 +125,7 @@ extension NotesOnboardingViewController: PaperOnboardingDataSource {
 
 
 //MARK: Constants
-extension NotesOnboardingViewController {
+extension OnboardingViewController {
     
     private static let titleFont = UIFont.boldSystemFont(ofSize: 34.0)
     private static let descriptionFont = UIFont.systemFont(ofSize: 20.0)
