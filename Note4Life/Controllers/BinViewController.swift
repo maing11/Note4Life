@@ -22,7 +22,7 @@ class BinViewController: UIViewController {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.tintColor = UIColor.white
-        let image = UIImage(named: "icons8-xbox_x_filled")
+        let image = UIImage(named: "icons8-delete_sign_filled")
         let tintImage = image?.withRenderingMode(.alwaysTemplate)
         button.setImage(tintImage, for: .normal)
         button.addTarget(self, action: #selector(didTapClose), for: .touchUpInside)
@@ -44,7 +44,7 @@ class BinViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.tintColor = UIColor.white
         label.numberOfLines = 2
-        label.text = "No Trash, It is good for the earth"
+        label.text = "Empty"
         label.backgroundColor = .clear
         label.textColor = UIColor.white
         label.textAlignment = .center
@@ -95,7 +95,7 @@ class BinViewController: UIViewController {
     
     override func viewDidLoad() {
         self.view.height = screenHeight - 100
-        self.view.backgroundColor = NoteTheme.backgroundColor
+        self.view.backgroundColor = UIColor.black
         self.navigationController?.navigationBar.barStyle = .black
         self.navigationController?.navigationBar.tintColor = UIColor.white
         let originalImage = UIImage(named: "icons8-delete")
@@ -134,7 +134,7 @@ class BinViewController: UIViewController {
         self.closeButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20).isActive = true
         self.closeButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         self.closeButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        self.closeButton.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        self.closeButton.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
         
         self.emptyImageView.heightAnchor.constraint(equalToConstant: 75).isActive = true
         self.emptyImageView.widthAnchor.constraint(equalToConstant: 75).isActive = true

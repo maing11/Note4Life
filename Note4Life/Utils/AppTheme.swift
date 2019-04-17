@@ -12,7 +12,7 @@ import UIKit
 class NoteTheme {
     
     static var backgroundColor: UIColor {
-        return UIColor.init(hexString: "#E3CAAC")
+        return UIColor.white
     }
     
     static var logoImage: UIImage {

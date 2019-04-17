@@ -12,14 +12,14 @@ import UIKit
 enum Category: Int {
     case Work = 0
     case Home = 1
-    case Appoitment = 2
+    case Plan = 2
     case Grocery = 3
-    case Fun = 4
-    case Resolution = 5
+    case Tips = 4
+    case Goals = 5
     case All = 6
     
     static func allCategories() -> [Category] {
-        return [Category.Work, Category.Home, Category.Appoitment, Category.Grocery, Category.Fun, Category.Resolution, Category.All]
+        return [Category.Work, Category.Home, Category.Plan, Category.Grocery, Category.Tips, Category.Goals, Category.All]
     }
 }
 
@@ -32,11 +32,11 @@ extension Category {
             return "icons8-calendar_plus"
         case .Grocery:
             return "icons8-goal"
-        case .Appoitment:
+        case .Plan:
             return "icons8-bread"
-        case .Resolution:
+        case .Goals:
             return "icons8-presentation"
-        case .Fun:
+        case .Tips:
             return "icons8-online_support"
         case .All:
             return "icons8-check_all"
@@ -47,19 +47,19 @@ extension Category {
     func categoryBackgroundImageName() -> String{
         switch self {
         case .Work:
-            return "work"
+            return "c1"
         case .Home:
-            return "home"
+            return "c2"
         case .Grocery:
-            return "grocery"
-        case .Appoitment:
-            return "appointment"
-        case .Resolution:
-            return "resolution"
-        case .Fun:
-            return "func"
+            return "c3"
+        case .Plan:
+            return "c4"
+        case .Goals:
+            return "c5"
+        case .Tips:
+            return "c6"
         case .All:
-            return "all"
+            return "c7-1"
         }
     }
     
@@ -72,12 +72,12 @@ extension Category {
             return "Home"
         case .Grocery:
             return "Grocery"
-        case .Appoitment:
-            return "Appoitment"
-        case .Resolution:
-            return "Resolution"
-        case .Fun:
-            return "Fun"
+        case .Plan:
+            return "Plan"
+        case .Goals:
+            return "Goals"
+        case .Tips:
+            return "Tips"
         case .All:
             return "All Notes"
         }
@@ -91,11 +91,11 @@ extension Category {
             return ThemeColor.thisWeek.value
         case .Grocery:
             return ThemeColor.goals.value
-        case .Appoitment:
+        case .Plan:
             return ThemeColor.anytime.value
-        case .Resolution:
+        case .Goals:
             return ThemeColor.projects.value
-        case .Fun:
+        case .Tips:
             return ThemeColor.needHelp.value
         case .All:
             return ThemeColor.all.value

@@ -28,6 +28,7 @@ class NotesViewController: UIViewController {
         searchBar.showsCancelButton = true
         searchBar.frame = CGRect(x: 0, y: 0, width: 200, height: 70)
         searchBar.barTintColor = UIColor.clear
+        searchBar.backgroundColor = NoteTheme.backgroundColor
         searchBar.isUserInteractionEnabled = true
         searchBar.showsCancelButton = false
         return searchBar
@@ -47,7 +48,7 @@ class NotesViewController: UIViewController {
         let origImage = UIImage(named: "icons8-delete")
         let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
         trash.setImage(tintedImage, for: .normal)
-        trash.tintColor = .white
+        trash.tintColor = .black
         trash.addTarget(self, action: #selector(trashPressed), for: .touchUpInside)
         return trash
     }()
@@ -130,13 +131,13 @@ class NotesViewController: UIViewController {
         view.addGestureRecognizer(tap)
         
         self.trashButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
-        self.trashButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        self.trashButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         self.trashButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         self.trashButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         
         
         self.searchBar.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
-        self.searchBar.trailingAnchor.constraint(equalTo: self.trashButton.leadingAnchor).isActive = true
+        self.searchBar.trailingAnchor.constraint(equalTo: self.view.trailingAnchor).isActive = true
         self.searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         
         self.tableView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true

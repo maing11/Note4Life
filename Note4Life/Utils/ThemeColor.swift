@@ -39,28 +39,8 @@ enum ThemeColor {
 extension ThemeColor {
     
     var value: UIColor {
-        var color = UIColor.clear
-        
-        switch self {
-        case .today:
-            color = AppConstant.Palette.skyfall.color
-        case .thisWeek:
-            color = AppConstant.Palette.orange.color
-        case .anytime:
-            color = AppConstant.Palette.pinky.color
-        case .projects:
-            color = AppConstant.Palette.tokenOrange.color
-        case .goals:
-            color = AppConstant.Palette.greenBlue.color
-        case .needHelp:
-            color = AppConstant.Palette.littleGreen.color
-        case .all:
-            color = AppConstant.Palette.skinBlue.color
+        var color = AppConstant.Palette.greenBlue.color
     
-        case .custom(let hexValue, let opacity):
-            color = hexValue.color.withAlphaComponent(CGFloat(opacity))
-        }
-        
         return color
     }
 }

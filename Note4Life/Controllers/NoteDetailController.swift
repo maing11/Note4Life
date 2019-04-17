@@ -16,44 +16,17 @@ class NoteDetailController: UIViewController {
         textView.translatesAutoresizingMaskIntoConstraints = false
         textView.font = UIFont.preferredFont(forTextStyle: .headline)
         textView.adjustsFontForContentSizeCategory = true
-        textView.textColor = UIColor.white
+        textView.textColor = UIColor.black
         textView.text = "..."
         textView.textAlignment = .left
         textView.isScrollEnabled = true
-        textView.backgroundColor = UIColor.white
+        textView.backgroundColor = NoteTheme.backgroundColor
         textView.dataDetectorTypes = .all
         textView.tintColor = UIColor.gray
         return textView
     }()
     
-    let backGroundTextView: UnderlinedTextView = {
-        let textView = UnderlinedTextView()
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.font = UIFont.preferredFont(forTextStyle: .headline)
-        textView.adjustsFontForContentSizeCategory = true
-        textView.textColor = UIColor.white
-        textView.textAlignment = .left
-        textView.isScrollEnabled = true
-        textView.backgroundColor = UIColor.clear
-        textView.dataDetectorTypes = .all
-        textView.tintColor = UIColor.gray
-        textView.isUserInteractionEnabled = false
-        return textView
-    }()
-    
-    let changeCategoryButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.titleLabel?.font = UIFont.preferredFont(forTextStyle: .headline)
-        button.titleLabel?.adjustsFontForContentSizeCategory = true
-        button.setTitleColor(.white, for: .normal)
-        button.backgroundColor = .clear
-        button.titleLabel?.sizeToFit()
-        button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(showAlert(_:)), for: .touchUpInside)
-        return button
-    }()
-    
+
     var note: Note? = nil
     var category: Category  = .Work
     let placeholder = "Write you note here"
@@ -85,24 +58,16 @@ class NoteDetailController: UIViewController {
         if self.note == nil {
             self.note = Note(content: "")
             self.note?.category = self.category
-            self.changeCategoryButton.backgroundColor = self.category.categoryColor()
-            self.changeCategoryButton.setTitle(self.category.categoryName(), for: .normal)
         }
         
         self.originalContent = self.note?.content ?? ""
         
-        self.view.addSubview(self.changeCategoryButton)
+      
         self.view.addSubview(self.textView)
-        self.view.addSubview(self.backGroundTextView)
+       
         
-        self.changeCategoryButton.topAnchor.constraint(equalTo: self.view.readableContentGuide.topAnchor, constant: 10).isActive = true
-        self.changeCategoryButton.leadingAnchor.constraint(equalTo: self.view.readableContentGuide.leadingAnchor).isActive = true
-        self.changeCategoryButton.widthAnchor.constraint(equalToConstant: 120).isActive = true
-        self.changeCategoryButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
         
-        self.changeCategoryButton.layer.cornerRadius = 15
-        
-        self.textView.topAnchor.constraint(equalTo: self.changeCategoryButton.bottomAnchor).isActive = true
+        self.textView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
         self.textView.leadingAnchor.constraint(equalTo: self.view.readableContentGuide.leadingAnchor).isActive = true
         self.textView.trailingAnchor.constraint(equalTo: self.view.readableContentGuide.trailingAnchor).isActive = true
         self.textView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
@@ -110,10 +75,6 @@ class NoteDetailController: UIViewController {
         self.textView.text = self.note?.content.isEmpty == true ? self.placeholder : self.note?.content
         self.textView.tintColor = UIColor.lightGray
         
-        self.backGroundTextView.topAnchor.constraint(equalTo: self.changeCategoryButton.bottomAnchor).isActive = true
-        self.backGroundTextView.leadingAnchor.constraint(equalTo: self.view.readableContentGuide.leadingAnchor).isActive = true
-        self.backGroundTextView.trailingAnchor.constraint(equalTo: self.view.readableContentGuide.trailingAnchor).isActive = true
-        self.backGroundTextView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         
         self.textView.text = self.note?.content.isEmpty == true ? self.placeholder : self.note?.content
         self.textView.tintColor = UIColor.lightGray
@@ -156,37 +117,7 @@ class NoteDetailController: UIViewController {
         }
     }
     
-    
-    @objc private func showAlert(_ sender: UIButton) {
-        let alertController = MyAlertController(title: "Pick Category", message: "😀🌵🐚🍋", preferredStyle: .alert)
-        
-        for category in Category.allCategories() {
-            let origImage = UIImage(named:category.categoryImageName())
-            let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
 
-            let categoryAction = UIAlertAction(title: category.categoryName(), style: .default, image: tintedImage){ _ in
-                self.category = category
-                self.note?.category = category
-                self.changeCategoryButton.backgroundColor = self.category.categoryColor()
-                self.changeCategoryButton.setTitle(self.category.categoryName(), for: .normal)
-                self.changeCategoryButton.titleLabel?.sizeToFit()
-                self.navigationItem.title = category.categoryName()
-            }
-          
-            categoryAction.titleTextColor = category.categoryColor()
-            alertController.addAction(categoryAction)
-            
-        }
-       
-        alertController.addAction(title: "Cancel", style: .cancel)
-        
-        alertController.addParallaxEffect(x: 10, y: 10)
-        self.present(alertController, animated: true)
-    
-        alertController.titleAttributes += [
-            StringAttribute(key: .foregroundColor, value: category.categoryColor())
-        ]
-    }
 }
 
 extension NoteDetailController: UITextViewDelegate {

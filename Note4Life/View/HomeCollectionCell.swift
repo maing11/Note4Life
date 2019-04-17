@@ -30,7 +30,8 @@ class HomeCollectionCell: UICollectionViewCell {
             
             self.categoryView.actionButton.tintColor = .white
             self.categoryView.actionButton.backgroundColor = category.categoryColor()
-            self.categoryView.countLabel.layer.cornerRadius = self.categoryView.countLabel.height/2
+            self.categoryView.countLabel.layer.cornerRadius = 2
+            self.categoryView.actionButton.setImage(UIImage(named:"icons8-plus"), for: .normal)
             
             
             let blurEffect = UIBlurEffect(style: UIBlurEffect.Style.light)
