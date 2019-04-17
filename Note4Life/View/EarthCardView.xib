@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EarthCardView" customModule="Things_" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="vXm-lU-q6m"/>
+                <outlet property="imageView" destination="ZYo-58-zxI" id="eVf-QK-mPd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="113"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZYo-58-zxI">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="113"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ZYo-58-zxI" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="D84-pI-ReY"/>
+                <constraint firstItem="ZYo-58-zxI" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="QUg-ae-xBF"/>
+                <constraint firstItem="ZYo-58-zxI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="bYp-69-vKt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZYo-58-zxI" secondAttribute="bottom" id="dvv-qG-dYv"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="-65.599999999999994" y="-101.19940029985008"/>
+        </view>
+    </objects>
+</document>

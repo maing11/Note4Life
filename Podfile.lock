@@ -1,0 +1,27 @@
+PODS:
+  - paper-onboarding (5.0.1)
+  - Realm (3.12.0):
+    - Realm/Headers (= 3.12.0)
+  - Realm/Headers (3.12.0)
+  - RealmSwift (3.12.0):
+    - Realm (= 3.12.0)
+
+DEPENDENCIES:
+  - paper-onboarding
+  - Realm (~> 3.12.0)
+  - RealmSwift (~> 3.12.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - paper-onboarding
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  paper-onboarding: ae39e418748c0b4eab39b2e59f398b48cdebfae5
+  Realm: cdaef23c4ddb36ab1ddffed23f5a7f3332fc5585
+  RealmSwift: 5576324033f0aa5ef1e0a839a3da2281dff47a7f
+
+PODFILE CHECKSUM: 4f0b72dc1c4f5fb8012c1686feb1a2c45e239bbe
+
+COCOAPODS: 1.6.1
