@@ -181,13 +181,11 @@ class NotesViewController: UIViewController {
     }
     
     @objc private func showAlert() {
-        let alertController = MyAlertController(title: "Pick Category", message: "😀🌵🐚🍋", preferredStyle: .alert)
+        let alertController = MyAlertController(title: "Change Category", message: "😍👌🏼😎", preferredStyle: .alert)
         
         for category in Category.allCategories() {
-            let origImage = UIImage(named:category.categoryImageName())
-            let tintedImage = origImage?.withRenderingMode(.alwaysTemplate)
             
-            let categoryAction = UIAlertAction(title: category.categoryName(), style: .default, image: tintedImage){ _ in
+            let categoryAction = UIAlertAction(title: category.categoryName(), style: .default, image: nil){ _ in
                 self.selectedNote?.category = category
                 self.selectedNote?.write(dataSource: self.realmDataPersistence)
             }
