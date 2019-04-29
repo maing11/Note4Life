@@ -18,21 +18,21 @@ class OnboardingViewController: UIViewController {
         OnboardingItemInfo(informationImage: NoteTheme.onboardingInfoImages[0],
                            title: NoteTheme.titleArray[0],
                            description: NoteTheme.descArray[0],
-                           pageIcon: NoteTheme.onboardingPageIcons[0],
+                           pageIcon: NoteTheme.onboardingInfoImages[2],
                            color: NoteTheme.onboardingColors[0],
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: NoteTheme.onboardingInfoImages[1],
                            title: NoteTheme.titleArray[1],
                            description: NoteTheme.descArray[1],
-                           pageIcon: NoteTheme.onboardingPageIcons[1],
+                           pageIcon: NoteTheme.onboardingInfoImages[2],
                            color: NoteTheme.onboardingColors[1],
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: NoteTheme.onboardingInfoImages[2],
                            title: NoteTheme.titleArray[2],
                            description: NoteTheme.descArray[2],
-                           pageIcon: NoteTheme.onboardingPageIcons[2],
+                           pageIcon: NoteTheme.onboardingInfoImages[2],
                            color: NoteTheme.onboardingColors[2],
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont)
         ]
@@ -127,7 +127,7 @@ extension OnboardingViewController: PaperOnboardingDataSource {
 //MARK: Constants
 extension OnboardingViewController {
     
-    private static let titleFont = UIFont.boldSystemFont(ofSize: 34.0)
+    private static let titleFont = UIFont.boldSystemFont(ofSize: 30.0)
     private static let descriptionFont = UIFont.systemFont(ofSize: 20.0)
 }
 

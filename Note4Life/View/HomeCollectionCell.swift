@@ -82,7 +82,7 @@ class HomeCollectionCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         self.categoryView.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10).isActive = true
-        self.categoryView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 0).isActive = true
+        self.categoryView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: 10).isActive = true
         self.categoryView.leadingAnchor.constraint(equalTo: self.contentView.readableContentGuide.leadingAnchor).isActive = true
         self.categoryView.trailingAnchor.constraint(equalTo: self.contentView.readableContentGuide.trailingAnchor).isActive = true
     }

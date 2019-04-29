@@ -20,15 +20,14 @@ class NoteTheme {
     }
     
     static var onboardingColors: [UIColor] {
-        return [ UIColor.init(hexString: "#E3493B"),UIColor.init(hexString: "#EEBA4C"), UIColor.black]
-    }
+        return [ UIColor.black ,UIColor.orange, UIColor.blue]}
     
     static var onboardingInfoImages: [UIImage] {
-        return [UIImage(named: "earthInfo1")!.tint(), UIImage(named: "earthInfo2")!.tint(), UIImage(named: "earthInfo3")!.tint(), UIImage(named: "earthInfo4")!.tint()]
+        return [UIImage(named: "earthInfo1")!.tint(), UIImage(named: "earthInfo2")!.tint(), UIImage(named: "earthInfo3")!.tint()]
     }
     
     static var onboardingPageIcons: [UIImage] {
-        return [UIImage(named: "animal1")!.tint(),UIImage(named: "animal2")!.tint(),UIImage(named: "animal3")!.tint(),UIImage(named: "animal4")!.tint()]
+        return []
     }
     
     static var descArray: [String] {
